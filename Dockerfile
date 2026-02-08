@@ -2,7 +2,7 @@ FROM eclipse-temurin:17-jre-jammy
 
 WORKDIR /app
 
-COPY pom.xml
+COPY pom.xml .
 
 EXPOSE 8080
 
