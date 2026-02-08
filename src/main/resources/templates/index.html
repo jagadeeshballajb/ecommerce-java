@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyShop - E-Commerce</title>
+</head>
+<body>
+
+<h1>MyShop</h1>
+
+<h2>Products</h2>
+
+<ul>
+    <li th:each="product : ${products}">
+        <b th:text="${product.name}"></b> -
+        <span th:text="${product.price}"></span>
+    </li>
+</ul>
+
+</body>
+</html>
