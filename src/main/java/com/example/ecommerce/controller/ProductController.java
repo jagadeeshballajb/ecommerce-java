@@ -14,9 +14,9 @@ public class ProductController {
     public String home(Model model) {
 
         List<Product> products = List.of(
-                new Product("Mobile Phone", "₹15,000"),
-                new Product("Laptop", "₹55,000"),
-                new Product("Headphones", "₹2,000")
+                new Product(1, "Laptop", 50000),
+                new Product(2, "Phone", 20000),
+                new Product(3, "Headset", 2000)
         );
 
         model.addAttribute("products", products);
