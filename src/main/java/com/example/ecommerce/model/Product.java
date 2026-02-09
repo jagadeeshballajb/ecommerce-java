@@ -1,25 +1,40 @@
-package com.example.ecommerce.controller;
+package com.example.ecommerce.model;
 
-import com.example.ecommerce.model.Product;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+public class Product {
 
-import java.util.List;
+    private int id;
+    private String name;
+    private double price;
 
-@Controller
-public class ProductController {
+    public Product() {}
 
-    @GetMapping("/")
-    public String home(Model model) {
+    public Product(int id, String name, double price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
 
-        List<Product> products = List.of(
-                new Product("Mobile Phone", "₹15,000"),
-                new Product("Laptop", "₹55,000"),
-                new Product("Headphones", "₹2,000")
-        );
+    public int getId() {
+        return id;
+    }
 
-        model.addAttribute("products", products);
-        return "index";
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
